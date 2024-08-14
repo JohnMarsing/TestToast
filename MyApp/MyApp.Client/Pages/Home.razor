@@ -1,0 +1,15 @@
+﻿@using Blazored.Toast.Configuration
+
+@page "/"
+@inject IToastService ToastService
+
+<PageTitle>Home</PageTitle>
+
+
+
+<h1 class="text-center">Blazored Toasts</h1>
+
+<button class="btn btn-info" id="InfoButton"
+				@onclick="@(() => ToastService.ShowInfo("I'm an INFO message", settings => settings.IconType = IconType.None))">
+	Info Toast
+</button>
